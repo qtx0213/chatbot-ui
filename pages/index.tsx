@@ -33,6 +33,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import { useEffect, useRef, useState } from 'react';
+import { json } from 'stream/consumers';
 import { v4 as uuidv4 } from 'uuid';
 
 interface HomeProps {
@@ -116,7 +117,7 @@ const Home: React.FC<HomeProps> = ({
         signal: controller.signal,
         body: JSON.stringify(chatBody),
       });
-
+      console.log(JSON.stringify(chatBody))
       if (!response.ok) {
         setLoading(false);
         setMessageIsStreaming(false);
