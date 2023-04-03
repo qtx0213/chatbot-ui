@@ -311,6 +311,11 @@ export const ChatInput: FC<Props> = ({
           )}
         </div>
       </div>
+      <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
+        {t(
+          "If you have a key, you can enter and use it in the custom key located at the bottom left corner.",
+        )}
+      </div>
     </div>
   );
 };
